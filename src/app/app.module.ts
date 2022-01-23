@@ -3,16 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormComponent } from './components/form/form.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { ApiComponent } from './components/ApiComponent/api.component';
+import { HttpClientModule } from '@angular/common/http';
+import { KeysPipe } from './pipes/keys.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormComponent,
+    ApiComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

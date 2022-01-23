@@ -1,0 +1,30 @@
+<div class="container" style="background-color: rgba(169,169,169,0.93); margin-top: 9rem; border-radius: 25px; border: 2px solid rgba(169,169,169,0.93);">
+  <div class="row" style="padding: 30px;">
+    <div class="form-group">
+      <label>PU : </label>
+      <input required class="form-control" type="number" name="pu" [(ngModel)]="pu"/>
+    </div>
+
+    <div class="form-group">
+      <label>Qte : </label>
+      <input required  class="form-control"  type="number"  name="qte" [(ngModel)]="qte"/>
+    </div>
+    <button (click)="calculer()" class="btn btn-primary btn-sm" style="max-width: 14%; margin-top: 9px" >Calculer</button>
+    <div [ngClass]="'bold'"> Ht: {{ht | number: '1.0-0'}} TVA: {{tva | number: '1.0-0'}} TTC: {{ttc | number: '1.0-0'}}</div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+</div>
+

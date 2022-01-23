@@ -1,0 +1,33 @@
+<div class="container mt-5">
+
+  <h2>Times</h2>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Fajr</th>
+      <th>Dhuhur</th>
+      <th>Asr</th>
+      <th>Maghrib</th>
+      <th>Isha</th>
+      <th>Gregorian</th>
+      <th>Hijri</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let day of datetimes">
+      <th>{{day?.times?.Fajr}}</th>
+      <th>{{day?.times?.Dhuhr}}</th>
+      <th>{{day?.times?.Asr}}</th>
+      <th>{{day?.times?.Maghrib}}</th>
+      <th>{{day?.times?.Isha}}</th>
+      <th>{{day?.date?.gregorian}}</th>
+      <th>{{day?.date?.hijri}}</th>
+    </tr>
+
+<!--    <tr *ngFor="let time of times | keys">-->
+<!--      <td>{{time}}: {{times[time]}}</td>-->
+<!--    </tr>-->
+    </tbody>
+  </table>
+</div>
